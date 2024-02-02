@@ -21,9 +21,7 @@ public class Lambda02 {
 
         double min = 100.00;
 
-        Predicate<Product> predi = p -> p.getPrice() >= min;
-
-        list.removeIf(predi);
+        list.removeIf(p -> p.getPrice() >= min);
 
         for (Product p : list) {
             System.out.println(p);
