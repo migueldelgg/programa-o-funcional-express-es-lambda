@@ -24,8 +24,12 @@ public class Product{
     public void setPrice(Double price) {
         this.price = price;
     }
-    public static void staticUpdatePrice(Product p) {
+    public static void staticPriceUpdate(Product p) {
         p.setPrice(p.getPrice() * 1.1);
+    }
+
+    public void nonStaticPriceUpdate(){
+        this.price = this.price * 1.1;
     }
     @Override
     public String toString() {

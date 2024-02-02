@@ -16,7 +16,7 @@ public class consumer01 {
         list.add(new Product("Tablet", 350.50));
         list.add(new Product("HD Case", 80.90));
 
-        list.forEach(Product::staticUpdatePrice);
+        list.forEach(Product::nonStaticPriceUpdate);
 
         list.forEach(System.out::println); // reference method para o println
     }
