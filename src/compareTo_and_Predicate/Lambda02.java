@@ -1,12 +1,10 @@
-package application;
+package compareTo_and_Predicate;
 
 import entities.Product;
-import util.ProductPredicate;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.function.Predicate;
 
 public class Lambda02 {
     public static void main(String[] args) {
