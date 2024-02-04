@@ -1,4 +1,4 @@
-package compareTo_and_Predicate;
+package AcompareTo_and_Predicate;
 
 import entities.Product;
 

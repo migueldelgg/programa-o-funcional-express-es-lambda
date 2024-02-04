@@ -1,11 +1,11 @@
-package compareTo_and_Predicate;
+package AcompareTo_and_Predicate;
 
 import entities.Product;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Program {
+public class compareTo02 {
     public static void main(String[] args) {
 
         List<Product> list = new ArrayList<>();

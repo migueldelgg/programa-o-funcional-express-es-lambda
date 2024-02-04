@@ -1,14 +1,14 @@
-package consumer;
+package AcompareTo_and_Predicate;
 
 import entities.Product;
-import util.PriceUpdate;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
+import java.util.Locale;
 
-public class consumer01 {
+public class predicate01 {
     public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
 
         List<Product> list = new ArrayList<>();
 
@@ -17,10 +17,12 @@ public class consumer01 {
         list.add(new Product("Tablet", 350.50));
         list.add(new Product("HD Case", 80.90));
 
-        double factor = 1.1;
+        double min = 100.00;
 
-        list.forEach(p -> p.setPrice(p.getPrice() * factor));
+        list.removeIf(p -> p.getPrice() >= min);
 
-        list.forEach(System.out::println); // reference method para o println
+        for (Product p : list) {
+            System.out.println(p);
+        }
     }
 }

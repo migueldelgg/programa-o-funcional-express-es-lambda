@@ -1,12 +1,12 @@
-package compareTo_and_Predicate;
+package Cfunction;
 
 import entities.Product;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.stream.Collectors;
 
-public class Lambda02 {
+public class function01 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
 
@@ -17,12 +17,9 @@ public class Lambda02 {
         list.add(new Product("Tablet", 350.50));
         list.add(new Product("HD Case", 80.90));
 
-        double min = 100.00;
+        List <String> productsNames = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
 
-        list.removeIf(p -> p.getPrice() >= min);
+        productsNames.forEach(System.out::println);
 
-        for (Product p : list) {
-            System.out.println(p);
-        }
     }
 }
